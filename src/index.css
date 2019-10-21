@@ -1,0 +1,64 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#about {
+  margin-top: 0;
+}
+
+.header {
+  background-color: rgba(0,0,0);
+  margin-bottom: 0;
+}
+
+.title {
+  color: burlywood;
+  font-family: 'Lobster', cursive;
+}
+
+.cover {
+  height: 100%;
+  width: 100%;
+  color: black;
+  opacity: 1;
+}
+
+.text {
+  font-family: 'Gayathri', sans-serif;
+}
+
+.summary {
+  width: 60%;
+  text-align: justify;
+  line-height: 2rem;
+  letter-spacing: .1rem;
+}
+
+.stack {
+  font-size: 10rem;
+}
+
+.fa-react {
+  color: rgb(94, 160, 221);
+}
+
+.fa-node {
+  color: rgb(8, 80, 8);
+}
+
+.fa-css3-alt {
+  color: rgb(153, 64, 5);
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-icons {
+  margin: 0 1rem;
+  font-size: 2rem;
+  color: rgba(255,255,255,.7);
+}
