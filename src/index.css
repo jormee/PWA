@@ -1,12 +1,5 @@
-*,
-body {
-  margin: 0;
-  padding: 0;
-  transition: background-color .6s cubic-bezier(0.95, 0.05, 0.795, 0.035);
-}
-
-body {
-  background-color: #eee;
+*, body {
+  transition: background-color .6s cubic-bezier(0.95, 0.05, 0.795, 0.035), color .6s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
 .header {
@@ -47,13 +40,20 @@ body {
   transition: color .6s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
+.page-footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .stack-flex {
   display: flex;
   flex-wrap: wrap;
 }
 
 .stack {
-  font-size: 10rem;
+  font-size: 5rem;
 }
 
 .fa-react {
@@ -88,15 +88,21 @@ body {
   margin: 0;
   padding: 1rem;
 }
+
+.cardlist {
+  display: grid;
+  grid-gap: .5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+}
+
 .repo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 300px;
   border-radius: 1rem;
-  padding: .5rem;
+  padding: 1rem;
   z-index: 200;
-  margin: .5rem
 }
 
 .repo-description {
@@ -117,14 +123,9 @@ body {
   color: firebrick;
 }
 
-.cardlist {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(3, minmax(30%, 1fr));
-}
-
 .repo:hover {
   border: solid thin #999;
   border-radius: 1rem;
-  box-shadow: .5rem .5rem 2rem -.2rem #ccc;
+  transition: border 1s ease, box-shadow .6s ease;
 }
+

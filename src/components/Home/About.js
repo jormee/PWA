@@ -7,7 +7,7 @@ const About = () => {
   const { theme } = useContext(ThemeContext);
 
   return(
-    <div id="about" style={{backgroundColor: theme.bg, color: theme.color}}>
+    <div id="about" className='body' style={{backgroundColor: theme.bg, color: theme.color}}>
       <div className="container" >
         <h2 className="title" style={{color: theme.title}}>About</h2>
         <div className="row story">
@@ -36,6 +36,14 @@ const About = () => {
             <div className="center col s6 m4 l3">
               <i className="fab fa-node stack"></i>
               <p>Node</p>
+            </div>
+            <div className="center col s6 m4 l3">
+              <i className="fab fa-css3-alt stack"></i>
+              <p>CSS3</p>
+            </div>
+            <div className="center col s6 m4 l3">
+              <i className="fab fa-css3-alt stack"></i>
+              <p>CSS3</p>
             </div>
             <div className="center col s6 m4 l3">
               <i className="fab fa-css3-alt stack"></i>

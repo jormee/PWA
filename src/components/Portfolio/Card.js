@@ -7,9 +7,9 @@ const Card = ({ node }) => {
   const { name, description, url, homepageUrl } = node;
 
   return(
-    <div className='repo' style={{backgroundColor: theme.ui, color: theme.color}}>
+    <div className='repo z-depth-2' style={{backgroundColor: theme.ui, color: theme.color}}>
       <div>
-        <h4 style={{color: theme.title}}>{name}</h4>
+        <h5 className='center' style={{color: theme.title}}>{name}</h5>
       </div>
       <div  className='repo-description'>
         <p>{description}</p>

@@ -3,7 +3,7 @@ import { gql } from 'apollo-boost';
 const getReposQuery = gql`
   {
     user(login:"jormee"){
-      repositories(first: 10){
+      repositories(first: 100){
         nodes {
           id
           name

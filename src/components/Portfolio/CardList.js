@@ -1,21 +1,26 @@
-import React, { lazy, useContext } from 'react';
+import React, { lazy, useContext, useEffect, useState } from 'react';
 import { PortfolioContext } from '../../contexts/PortfolioContext';
 
 const Card = lazy(() => import('./Card'));
 
 const CardList = () => {
   const { loading, error, data } = useContext(PortfolioContext);
-  
-  if(error){return <h1>error</h1>}
+  const [nodes, setNodes] = useState([])
 
-  if(loading){
-    return <h1>loading</h1>
-  }
-  
-  const { nodes } = data.user.repositories;
+  useEffect(() => {
+    if(data){
+      const {nodes} = data.user.repositories;
+      setNodes([...nodes])
+  }},
+    [data]
+  )  
   return(
     <div className='cardlist'>
-      {nodes.map(node => <Card key={node.id} node={node} />)}
+      {
+        loading ?  <h3>Loading Repos</h3> :
+        error ? <h3>We encountered an error while loading the contents of this repo</h3> :
+        nodes.map(node => <Card key={node.id} node={node} />)
+      }
     </div>
   )
 

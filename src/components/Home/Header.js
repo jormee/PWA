@@ -13,7 +13,7 @@ const Header = () => {
           </lottie-player>
         </div>
         <div className="col s12 m8 l8 pull-l4 pull-m4">
-          <h1 className="title">Hi There!</h1>
+          <h3 style={{color: theme.title}} className="title">Hi There!</h3>
           <p className="white-text text flow-text">I'm Folajomi, It's a pleasure to have you <span role="img" aria-label="smiling face" className="emoji">&#128513;</span></p>
         </div>
 
