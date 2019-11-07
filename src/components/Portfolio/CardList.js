@@ -17,7 +17,7 @@ const CardList = () => {
   return(
     <div className='cardlist'>
       {
-        loading ?  <h3>Loading Repos</h3> :
+        loading ?  <h5>Loading Repos...</h5> :
         error ? <h3>We encountered an error while loading the contents of this repo</h3> :
         nodes.map(node => <Card key={node.id} node={node} />)
       }

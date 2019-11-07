@@ -42,12 +42,16 @@ const About = () => {
               <p>CSS3</p>
             </div>
             <div className="center col s6 m4 l3">
-              <i className="fab fa-css3-alt stack"></i>
-              <p>CSS3</p>
+              <span className="iconify stack" data-icon="logos:javascript" data-inline="false"></span>
+              <p>JavaScript</p>
             </div>
             <div className="center col s6 m4 l3">
-              <i className="fab fa-css3-alt stack"></i>
-              <p>CSS3</p>
+              <span className="iconify stack graphql" data-icon="simple-icons:graphql" data-inline="false"></span>
+              <p>GraphQL</p>
+            </div>
+            <div className="center col s6 m4 l3">
+              <span className="iconify stack" data-icon="logos:apollostack" data-inline="false"></span>
+              <p>Apollo</p>
             </div>
           </div>
         </div>

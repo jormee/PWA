@@ -3,7 +3,9 @@ import { Route, Switch } from 'react-router-dom';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
+import Loading from './components/Loading';
 import ThemeContextProvider from './contexts/ThemeContext';
+import SidenavContextProvider from './contexts/SidenavContext';
 
 const client = new ApolloClient({
   uri: process.env.REACT_APP_GITHUB_BASE_URL,
@@ -21,17 +23,19 @@ const Footer = lazy(() => import('./components/Footer'));
 function App() {
   return (
     <ApolloProvider client = {client}>
-      <Suspense fallback={<h5>Please wait...</h5>}>
-        <ThemeContextProvider>
-          <Nav />
+      <ThemeContextProvider>
+        <Suspense fallback={<Loading />}>
+          <SidenavContextProvider>
+            <Nav />
+          </SidenavContextProvider>
           <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/portfolio' component={Portfolio} />
             <Route component={Err} />
           </Switch>
           <Footer />
-        </ThemeContextProvider>
-      </Suspense>
+        </Suspense>
+      </ThemeContextProvider>
     </ApolloProvider>
   );
 }
