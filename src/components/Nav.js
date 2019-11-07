@@ -29,7 +29,7 @@ const { isActive, toggleSidenav } = useContext(SidenavContext);
             <li><NavLink to="/portfolio/">Portfolio</NavLink></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <a href="//" className="sidenav-toggle hide-on-large-only" style={{color: theme.title}} onClick={toggleSidenav}>
+          <a href="/#" className="sidenav-toggle hide-on-large-only" style={{color: theme.title}} onClick={toggleSidenav}>
           {
             isActive 
             ? <i className="fas fa-times"></i> 
